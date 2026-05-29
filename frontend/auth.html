@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nexus Tasks | Authentication</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <div class="background-animation"></div>
+    
+    <div class="app-container" style="max-width: 400px; margin-top: 10vh;">
+      <header class="app-header">
+        <h1>Nexus<span>Tasks</span></h1>
+        <p>Login to your workspace.</p>
+      </header>
+
+      <main class="app-main" style="grid-template-columns: 1fr;">
+        <section class="glass-panel">
+          <form id="authForm">
+            <div id="nameGroup" class="input-group" style="display: none;">
+              <label class="input-label">Name</label>
+              <input type="text" id="authName" placeholder="John Doe" />
+            </div>
+            <div class="input-group">
+              <label class="input-label">Email</label>
+              <input type="email" id="authEmail" placeholder="john@example.com" required />
+            </div>
+            <div class="input-group">
+              <label class="input-label">Password</label>
+              <input type="password" id="authPassword" placeholder="••••••••" required />
+            </div>
+            <button type="submit" class="btn-primary" id="authSubmitBtn">
+              <span class="btn-text">Login</span>
+            </button>
+            <p id="authError" style="color: var(--danger); font-size: 0.9rem; margin-top: 1rem; text-align: center; display: none;"></p>
+            <p style="text-align: center; margin-top: 1.5rem; font-size: 0.9rem;">
+              <a href="#" id="toggleAuth" style="color: var(--primary); text-decoration: none;">Need an account? Register here.</a>
+            </p>
+          </form>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="/auth.js"></script>
+  </body>
+</html>
